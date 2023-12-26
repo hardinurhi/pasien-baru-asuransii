@@ -39,7 +39,7 @@ describe('template spec', () => {
     cy.get('input[type=checkbox]#status_penanggungjawab').check();
     cy.get('select#layanan').select('Pemeriksaan Umum', {force:true}).focus();
     cy.get('select#unit_umum').select('POLI UMUM', {force:true}).focus();
-    // cy.get('select#id_jadwal_klinik').select(1, {force:true}).focus();
+    cy.get('select#id_jadwal_klinik').select(1, {force:true}).focus();
     cy.get('select#id_jadwal_klinik').select('Dr. dr. Bambang Satoto,Sp.Rad (K).M.Kes - Jumat(05:00:00 - 08:00:00) - POLI UMUM - 50', {force:true}).focus();
     cy.get('button[type=submit]').contains('Daftar').click();  
     cy.get('.sweet-alert button.confirm').focus().click();
